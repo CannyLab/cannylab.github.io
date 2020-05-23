@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SVLD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <link href="/assets/base.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/assets/forms.css" media="screen" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="/assets/public/favicon.ico" />
+
+    <script src="/assets/modernizr.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="profile">
+            <section class="profile-masthead" id="masthead">
+                <header class="profile-logo">
+                    <div class="profile-logo-image">
+                        <img alt="CannyLab SVLD" src="/images/logo.png" />
+                    </div>
+                    <div class="profile-name">
+                        <h1>CannyLab: SVLD</h1>
+                    </div>
+                </header>
+                <aside class="profile-summary">
+                    <div class="summary-location summary-module">
+                        <a href="http://github.com/cannylab">github.com/cannylab</a>
+                    </div>
+                </aside>
+            </section>
+
+            <section class="profile-content" id="content">
+                <!-- TODO header? -->
+
+                <div class="profile-description">
+                    <p>The social vision and language dataset is a large-scale multimodal dataset designed for research
+                        into social contextual learning. <a href="#">Read the paper</a></p>
+                </div>
+
+                <article class="profile-menu" id="menu">
+                    <nav class="menu-navigation">
+                        <ul class="menu-navigation-list">
+                            <li class="menu-navigation-list-item"><a href="#stats">Dataset Statistics</a></li>
+                            <li class="menu-navigation-list-item"><a href="#examples">Examples</a></li>
+                            <li class="menu-navigation-list-item"><a href="#get">Get the Dataset</a></li>
+
+                        </ul>
+                    </nav>
+
+                    <div id='stats' class='menu-category'>
+                        <h3 class="menu-category-name">Dataset Statistics</h3>
+                        [Coming Soon]
+                    </div>
+
+                    <div id='examples' class='menu-category'>
+                        <h3 class="menu-category-name">Examples</h3>
+                        <br>
+                        <img src="/images/svld.png" style="max-width:100%;">
+                    </div>
+
+
+                    <div id='get' class='menu-category'>
+                        <h3 class="menu-category-name">Request the Dataset</h3>
+
+                        The SVLD dataset is available for academic use only. Fill in the following form to request
+                        access to the dataset:
+
+                        <!-- modify this form HTML and place wherever you want your form -->
+
+                        <form action="https://formspree.io/xlepgqvv" method="POST">
+                            <label>
+                                Name:
+                                <input type="text" name="name" required>
+                            </label> <br>
+                            <label>
+                                Academic Email:
+                                <input type="email" name="_replyto" required>
+                            </label> <br>
+                            <label>
+                                Institution/Affiliation:
+                                <input type="text" name="institution" required>
+                            </label> <br>
+                            <label>
+                                Position (Undergraduate student, Graduate Student, Postdoc, Faculty, Other):
+                                <input type="text" name="Institution" required>
+                            </label> <br> <br>
+
+                            <button type="submit">Send</button>
+                        </form>
+
+                    </div>
+                    <div style="padding-bottom: 3em;"></div>
+
+
+                </article>
+
+            </section>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <nav class="footer-navigation">
+            <!-- <i class="icon-square-footer"></i>
+            <ul class="footer-navigation-list">
+                <li class="footer-navigation-item"><a href="https://squareup.com/developers">Square Developer</a></li>
+                <li class="footer-navigation-item"><a href="https://github.com/cashapp">Cash App</a></li>
+                <li class="footer-navigation-item"><a href="https://squareup.com/security">Security</a></li>
+                <li class="footer-navigation-item"><a href="https://squareup.com/legal/privacy">Privacy</a></li>
+                <li class="footer-navigation-item"><a href="https://squareup.com/help" class="track">Help Center</a>
+                </li>
+            </ul> -->
+            <p class="copyright">© 2020 Regents of the University of California. All rights reserved.</p>
+        </nav>
+    </footer>
+
+    <script type="text/javascript">
+        if (window == window.top) document.body.style.display = "block"; else window.top.location = window.location;
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-40704740-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</body>
+
+</html>
