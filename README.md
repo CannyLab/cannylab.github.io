@@ -1,7 +1,7 @@
 Cannylab Website Portal
 =========================
 
-[![Build Status](https://travis-ci.org/cannylab/cannylab.github.io.svg?branch=master)](https://travis-ci.org/cannylab/cannylab.github.io)
+[![Build Status](https://travis-ci.org/CannyLab/cannylab.github.io.svg?branch=master)](https://travis-ci.org/cannylab/cannylab.github.io)
 
 Simple website portal based on https://github.com/square/square.github.io
 
