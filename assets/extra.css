@@ -1,0 +1,5 @@
+.profile_thumbnail {
+    background: url(profile_images/canny.jpg) 50% 50% no-repeat; /* 50% 50% centers image in div */
+    width: 250px;
+    height: 250px;
+  }
