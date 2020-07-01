@@ -15,6 +15,10 @@ bundle install # first time only
 bundle exec jekyll serve
 ```
 
+### To update the papers page
+1. Run the python script `generate_paper_html.py` in the root folder to generate a "papers.html" page.
+2. Commit the new "papers.html" page to the repository.
+
 Adding a Project
 -----------
 
