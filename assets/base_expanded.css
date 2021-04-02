@@ -1351,7 +1351,7 @@ p {
     top: -1px;
   }
   .has-images .menu-item {
-    height: 249px;
+    height: 170px;
   }
   .has-images .menu-item {
     margin-top: 2.48571em;
@@ -1590,7 +1590,7 @@ p {
     top: 0;
   }
   .has-images .menu-item {
-    height: 323px;
+    height: 270px;
   }
   .has-images .menu-item:nth-child(-n+2) {
     margin-top: 1.21429em;
