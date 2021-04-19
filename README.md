@@ -1,4 +1,4 @@
-Cannylab Website Portal
+Darrell Group Website Portal
 =========================
 
 [![Build Status](https://travis-ci.org/CannyLab/cannylab.github.io.svg?branch=master)](https://travis-ci.org/cannylab/cannylab.github.io)
