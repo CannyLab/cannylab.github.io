@@ -129,6 +129,12 @@
       image: grace.jpg
       email: graceluo [at] berkeley.edu
       
+    - name: Baifeng Shi
+      website: https://bfshi.github.io/
+      research_interest: Computational foundation of vision
+      image: baifeng.jpg
+      email: baifeng_shi [at] berkeley.edu
+      
 - title: Visitors
   people:
   
