@@ -128,7 +128,16 @@
       research_interest: Vision & Language
       image: grace.jpg
       email: graceluo [at] berkeley.edu
-      
+
+    - name: Lisa Dunlap
+      website: https://www.lisabdunlap.com/
+      research_interest: Advisable models for vision and language
+      image: lisa.jpg
+      email: lisabdunlap [at] berkeley.edu
+
+- title: Undergraduate Students
+  people:
+
 - title: Visitors
   people:
   
