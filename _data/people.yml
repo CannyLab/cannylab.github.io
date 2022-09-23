@@ -1,6 +1,5 @@
 - title: Faculty
   people:
-
     - name: Trevor Darrell
       website: https://people.eecs.berkeley.edu/~trevor/
       research_interest:
@@ -20,109 +19,108 @@
 
 - title: PhD Students
   people:
-  
     - name: Amir Bar
       website: http://amirbar.net/
       research_interest: Video Understanding
       image: amir.jpg
       email: amirb4r [at] gmail.com
-  
+
     - name: Rodolfo Corona
       website: https://rcorona.github.io/
       research_interest: Vision & Language
       image: rudy.jpg
       email: rcorona [at] berkeley.edu
-  
+
     - name: Seth Dong Huk Park
       website: https://scholar.google.com/citations?user=_kJ-zUYAAAAJ&hl=en
       research_interest: Vision & Language
       image: sethpark.png
       email: seth.dh.park [at] eecs.berkeley.edu
-        
+
     - name: Devin Guillory
       website: http://www.devinguillory.com/
       research_interest: Learning with limited labels
       image: devin.jpg
       email: dguillory [at] berkeley.edu
-        
-    - name: Roi Herzing
+
+    - name: Roi Herzig
       website: https://roeiherz.github.io/
       research_interest: Video Understanding and Compositionality
       image: roi.jpg
       email: roeiherz [at] berkeley.edu
-        
+
     - name: Parsa Mahmoudieh
       website: https://people.eecs.berkeley.edu/~parsa.m/
       research_interest: Reinforcement Learning, Computer Vision, Robotics
       image: parsa.jpg
       email: parsa.m [at] berkeley.edu
-        
+
     - name: Medhini Narasimhan
       website: https://people.eecs.berkeley.edu/~medhini/
       research_interest: Multimodal Video Understanding
       image: medhini.png
       email: medhini [at] berkeley.edu
-              
+
     - name: Evonne Ng
       website: http://people.eecs.berkeley.edu/~evonne_ng/
       research_interest: Social and gesture understanding
       image: evonne.jpg
       email: evonne_ng [at] berkeley.edu
-              
+
     - name: Suzie Petryk
       website: https://spetryk.github.io/
       research_interest: Advisable Models
       image: suzie.png
       email: spetryk [at] berkeley.edu
-              
+
     - name: Colorado Reed
       website: http://people.eecs.berkeley.edu/~cjrd/
       research_interest: Unsupervised learning
       image: colorado.jpg
       email: cjrd [at] berkeley.edu
-              
+
     - name: Sheng Shen
       website: https://sincerass.github.io/
       research_interest: Vision & Language
       image: sheng.jpg
       email: sheng.s [at] berkeley.edu
-                    
+
     - name: Dequan Wang
       website: https://dequan.wang/
       research_interest: Computer Vision, Machine Learning, Robotics
       image: dequan.jpg
       email: dqwang [at] eecs.berkeley.edu
-                    
+
     - name: Olivia Watkins
       website: https://aliengirlliv.github.io/oliviawatkins/
       research_interest: Computer Vision and Robotics
       image: olivia.jpg
       email: oliviawatkins [at] berkeley.edu
-                    
+
     - name: Tete Xiao
       website: https://tetexiao.com/
       research_interest: Representation Learning
       image: tete.jpg
       email: txiao [at] eecs.berkeley.edu
-                    
+
     - name: Shizhan Zhu
       website: https://zhusz.github.io/homepage/
       research_interest: 3D
       image: shizhan.jpg
       email: zhshzhutah2 [at] gmail.com
-                    
+
     - name: Ritwik Gupta
       website: https://ritwikgupta.me/
       research_interest: Humanitarian assistance and disaster response
       image: ritwik.jpg
       email: ritwikgupta [at] berkeley.edu
-                          
+
     - name: Norman Mu
       website: http://normanmu.com/
       research_interest: Self-supervised learning
       image: norman.jpg
       email: thenorm [at] berkeley.edu
-                          
+
     - name: Grace Luo
       website: https://scholar.google.com/citations?user=j88h_roAAAAJ&hl=en&oi=ao
       research_interest: Vision & Language
@@ -140,7 +138,6 @@
 
 - title: Visitors
   people:
-  
     - name: Dian Chen
       website: http://dianch.github.io/
       research_interest: Few-shot learning
