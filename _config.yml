@@ -1,8 +1,1 @@
 auto: true
-
-plugins:
-  - jekyll-last-modified-at
-
-# Optional. The default date format, used if none is specified in the tag.
-last-modified-at:
-    date-format: '%b %d, %Y'

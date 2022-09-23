@@ -15,7 +15,7 @@
   <script src="/assets/modernizr.js" type="text/javascript"></script>
 </head>
 
-<body>
+<body onload="setModifiedDate();">
   <div class="wrapper">
     <div class="profile">
       <section class="profile-masthead" id="masthead">
@@ -72,7 +72,7 @@
 
     <footer class="footer">
       <nav class="footer-navigation">
-        <p class="copyright">© Regents of the University of California. All rights reserved. Last updated at {{ page.last_modified_at | date: '%B %d, %Y' }}.</p>
+        <p class="copyright">© Regents of the University of California. All rights reserved. Last updated at <span id="last-modified"></span>.</p>
       </nav>
     </footer>
 
@@ -109,6 +109,23 @@
       }
 
       includeHTML();
+    </script>
+
+    <script>
+      function setModifiedDate() {
+        if (document.getElementById('last-modified')) {
+          fetch("https://api.github.com/repos/DarrellGroup/darrellgroup.github.io/commits?path=index.html")
+            .then((response) => {
+              return response.json();
+            })
+            .then((commits) => {
+              var modified = commits[0]['commit']['committer']['date'].slice(0,10);
+              if(modified != "{{ page.date | date: '%Y-%m-%d' }}") {
+                document.getElementById('last-modified').textContent = modified;
+              }
+            });
+        }
+      }
     </script>
 
 </body>
