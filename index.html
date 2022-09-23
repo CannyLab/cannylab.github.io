@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html>
 
@@ -39,373 +41,33 @@
             multimodal interaction with robots and mobile devices.</p>
         </div>
 
-
-
       </section>
 
+      {% for division in site.data.people %}
+      {% if division.people.size > 0 %}
       <section class="profile-content">
-        <div id='faculty' class='menu-category'>
-          <h3 class="menu-category-name">Faculty</h3>
+        <div id='{{ division.title | downcase }}' class='menu-category'>
+          <h3 class="menu-category-name">{{ division.title }}</h3>
           <ol class="menu-category-list has-images">
+            {% assign sorted = division.people | sort: 'name' %}
+            {% for person in sorted %}
             <li class="menu-item">
               <div class="menu-item-info" style="text-align: center;">
-                <img src="./profile_images/trevor.jpg" style="object-fit:cover; width:180px; height:180px; border-radius:
+                <img src="./profile_images/{{ person.image }}" style="object-fit:cover; width:180px; height:180px; border-radius:
                   50%;">
-                <h4 class="menu-item-name">Trevor Darrell</h4>
+                <h4 class="menu-item-name">{{ person.name }}</h4>
                 <span class="menu-item-price">
-                  <a href="https://people.eecs.berkeley.edu/~trevor/" target="_blank">Home Page</a>
+                  <a href="{{ person.website }}" target="_blank">Home Page</a>
                 </span>
-                <p class="menu-item-description" style="height:auto"></p>
-                <p class="menu-item-description" style="height:auto">trevordarrell [at] berkeley.edu</p>
+                <p class="menu-item-description" style="height:auto">{{ person.research_interest }}</p>
+                <p class="menu-item-description" style="height:auto">{{ person.email }}</p>
               </div>
             </li>
+            {% endfor %}
         </div>
-        <div id='faculty' class='menu-category'></div>
-        </ol>
-        <h3 class="menu-category-name">Research Scientist</h3>
-        <ol class="menu-category-list has-images">
-          <li class="menu-item">
-            <div class="menu-item-info" style="text-align: center;">
-              <img src="./profile_images/anja - Anna Rohrbach PhD.jpg" style="width:180px; height:180px; border-radius:
-                50%;">
-              <h4 class="menu-item-name">Anna Rohrbach</h4>
-              <span class="menu-item-price">
-                <a href="https://anna-rohrbach.net/" target="_blank">Home Page</a>
-              </span>
-              <p class="menu-item-description" style="height:auto">Vision & Language</p>
-              <p class="menu-item-description" style="height:auto">anna.rohrbach [at] berkeley.edu</p>
-            </div>
-          </li>
-        </ol>
-    </div>
-
-    <div id='ugrads' class='menu-category'>
-      <h3 class="menu-category-name">Postdocs</h3>
-      <ol class="menu-category-list has-images">
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/XihuiLiu.jpg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Xihui Liu</h4>
-            <span class="menu-item-price">
-              <a href="https://xh-liu.github.io/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Vision & Language, Image Synthesis and Editing</p>
-            <p class="menu-item-description" style="height:auto">xihui.liu [at] berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/B_W - Sayna Ebrahimi.JPG" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Sayna Ebrahimi</h4>
-            <span class="menu-item-price">
-              <a href="https://people.eecs.berkeley.edu/~sayna/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Continual Learning, Active Learning, Few-shot
-              Learning</p>
-            <p class="menu-item-description" style="height:auto">sayna [at] berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/huijuan_photo - Dr. Huijuan Xu DPhil.jpeg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Huijuan Xu</h4>
-            <span class="menu-item-price">
-              <a href="http://people.eecs.berkeley.edu/~huijuan/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Action Understanding</p>
-            <p class="menu-item-description" style="height:auto">huijuan [at] berkeley.edu</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-
-    <div id='phd' class='menu-category'>
-      <h3 class="menu-category-name">PhD Students</h3>
-      <ol class="menu-category-list has-images">
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/samaneh.jpg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Samaneh Azadi</h4>
-            <span class="menu-item-price">
-              <a href="https://people.eecs.berkeley.edu/~sazadi/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">GANs, Image synthesis, Creativity</p>
-            <p class="menu-item-description" style="height:auto">sazadi [at] cs.berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/amir.jpeg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Amir Bar</h4>
-            <span class="menu-item-price">
-              <a href="http://amirbar.net" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Video Understanding</p>
-            <p class="menu-item-description" style="height:auto">amirb4r [at] gmail.com</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/rcorona_headshot - Rudy Corona Rodriguez.jpg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Rodolfo Corona </h4>
-            <span class="menu-item-price">
-              <a href="https://rcorona.github.io/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Vision & Language</p>
-            <p class="menu-item-description" style="height:auto">rcorona [at] berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/pic - SETH PARK.png" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Seth Dong Huk Park</h4>
-            <span class="menu-item-price">
-              <a href="https://scholar.google.com/citations?user=_kJ-zUYAAAAJ&hl=en" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Vision & Language</p>
-            <p class="menu-item-description" style="height:auto">seth.dh.park [at] eecs.berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/berkeley_headshot - Devin Guillory.jpg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Devin Guillory</h4>
-            <span class="menu-item-price">
-              <a href="http://www.devinguillory.com/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Learning with limited labels</p>
-            <p class="menu-item-description" style="height:auto">dguillory [at] berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/profile_circle - Roi Herzig.jpg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Roi Herzig</h4>
-            <span class="menu-item-price">
-              <a href="https://roeiherz.github.io/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Video Understanding and Compositionality</p>
-            <p class="menu-item-description" style="height:auto">roeiherz [at] berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/parsa.jpg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Parsa Mahmoudieh</h4>
-            <span class="menu-item-price">
-              <a href="https://people.eecs.berkeley.edu/~parsa.m/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Reinforcement Learning, Computer Vision, Robotics</p>
-            <p class="menu-item-description" style="height:auto">parsa.m [at] berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/medhini.png" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Medhini Narasimhan</h4>
-            <span class="menu-item-price">
-              <a href="https://people.eecs.berkeley.edu/~medhini/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Multimodal Video Understanding</p>
-            <p class="menu-item-description" style="height:auto">medhini [at] berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/headshot - Evonne Ng.jpg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Evonne Ng</h4>
-            <span class="menu-item-price">
-              <a href="http://people.eecs.berkeley.edu/~evonne_ng/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Social and gesture understanding</p>
-            <p class="menu-item-description" style="height:auto">evonne_ng [at] berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/IMG_0660_2 - Suzie Petryk.png" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Suzie Petryk</h4>
-            <span class="menu-item-price">
-              <a href="https://spetryk.github.io/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Advisable Models</p>
-            <p class="menu-item-description" style="height:auto">spetryk [at] berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/colo_happy - Colorado Reed.jpg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Colorado Reed</h4>
-            <span class="menu-item-price">
-              <a href="http://people.eecs.berkeley.edu/~cjrd/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Unsupervised learning</p>
-            <p class="menu-item-description" style="height:auto">cjrd [at] berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/ss_img - Sheng Shen.jpg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Sheng Shen</h4>
-            <span class="menu-item-price">
-              <a href="https://sincerass.github.io/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Vision & Language</p>
-            <p class="menu-item-description" style="height:auto">sheng.s [at] berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/avatar - Dequan Wang.jpg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Dequan Wang</h4>
-            <span class="menu-item-price">
-              <a href="https://dequan.wang/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Computer Vision, Machine Learning, Robotics</p>
-            <p class="menu-item-description" style="height:auto">dqwang [at] eecs.berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/olivia_square.jpg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Olivia Watkins</h4>
-            <span class="menu-item-price">
-              <a href="https://aliengirlliv.github.io/oliviawatkins/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Computer Vision and Robotics</p>
-            <p class="menu-item-description" style="height:auto">oliviawatkins [at] berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/IMG_3211 - Tete Xiao.JPG" style="width:180px; height:180px; border-radius: 50%;">
-            <h4 class="menu-item-name">Tete Xiao</h4>
-            <span class="menu-item-price">
-              <a href="https://tetexiao.com/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Representation Learning</p>
-            <p class="menu-item-description" style="height:auto">txiao [at] eecs.berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/me - Huazhe Xu.jpeg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Huazhe Xu</h4>
-            <span class="menu-item-price">
-              <a href="http://hxu.rocks" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Reinforcement Learning, Predictive Modeling,
-              Robotics</p>
-            <p class="menu-item-description" style="height:auto">huazhe_xu [at] berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/ShizhanZhu_THUEE_W02 - Shizhan Zhu.jpeg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Shizhan Zhu</h4>
-            <span class="menu-item-price">
-              <a href="https://zhusz.github.io/homepage/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">3D</p>
-            <p class="menu-item-description" style="height:auto">zhshzhutah2 [at] gmail.com</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/zhuangliu.jpg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Zhuang Liu</h4>
-            <span class="menu-item-price">
-              <a href="https://liuzhuang13.github.io" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Efficient Deep Learning</p>
-            <p class="menu-item-description" style="height:auto">zhuangl [at] berkeley.edu</p>
-          </div>
-        </li>
-
-
-      </ol>
-    </div>
-
-    <div id='ugrads' class='menu-category'>
-      <h3 class="menu-category-name">Undergraduate Students</h3>
-      <ol class="menu-category-list has-images">
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/anjali.jpeg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Anjali Kantharuban</h4>
-            <span class="menu-item-price">
-              <a href="" target="">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Instruction Following</p>
-            <p class="menu-item-description" style="height:auto">anjaliruban [at] berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/GraceLuo - Grace Luo.jpg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Grace Luo</h4>
-            <span class="menu-item-price">
-              <a href="http://linkedin.com/in/g-luo/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Vision & Language</p>
-            <p class="menu-item-description" style="height:auto">graceluo [at] berkeley.edu</p>
-          </div>
-        </li>
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/IMG_0627 - Simon Li.JPG" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Xuanlin (Simon) Li</h4>
-            <span class="menu-item-price">
-              <a href="https://xuanlinli17.github.io/" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Vision & Language, Reinforcement Learning</p>
-            <p class="menu-item-description" style="height:auto">xuanlinli17 [at] berkeley.edu</p>
-          </div>
-        </li>
-
-      </ol>
-    </div>
-
-    <div id='msgrads' class='menu-category'>
-      <h3 class="menu-category-name">Visitors</h3>
-      <ol class="menu-category-list has-images">
-        <li class="menu-item">
-          <div class="menu-item-info" style="text-align: center;">
-            <img src="./profile_images/Dian_Chen - Dian Chen.jpg" style="width:180px; height:180px; border-radius:
-                  50%;">
-            <h4 class="menu-item-name">Dian Chen</h4>
-            <span class="menu-item-price">
-              <a href="http://dianch.github.io" target="_blank">Home Page</a>
-            </span>
-            <p class="menu-item-description" style="height:auto">Few-shot learning</p>
-            <p class="menu-item-description" style="height:auto">dian [at] berkeley.edu</p>
-          </div>
-        </li>
-      </ol>
-    </div>
+      </section>
+      {% endif %}
+      {% endfor %}
 
 
     <footer class="footer">
