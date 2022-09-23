@@ -19,6 +19,14 @@ bundle exec jekyll serve
 1. Run the python script `generate_paper_html.py` in the root folder to generate a "papers.html" page.
 2. Commit the new "papers.html" page to the repository.
 
+Adding a Person
+-----------
+Here are the steps to add or modify a person:
+
+1. Open `_data/people.yml`. You will see a clearly organized list of titles and people.
+2. Insert/update yourself to the YAML list.
+3. Ensure your headshot is placed in `profile_images/`, that the filename is clean (ideally `firstname.<ext>` or `firstlast.<ext>`), and that you have minimzed the file size.
+
 Adding a Project
 -----------
 
