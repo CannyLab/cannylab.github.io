@@ -132,6 +132,12 @@
       research_interest: Advisable models for vision and language
       image: lisa.jpg
       email: lisabdunlap [at] berkeley.edu
+      
+    - name: Baifeng Shi
+      website: https://bfshi.github.io/
+      research_interest: Computational foundation of vision
+      image: baifeng.jpg
+      email: baifeng_shi [at] berkeley.edu
 
 - title: Undergraduate Students
   people:
