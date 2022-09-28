@@ -43,12 +43,6 @@
       image: devin.jpg
       email: dguillory [at] berkeley.edu
 
-    - name: Roi Herzig
-      website: https://roeiherz.github.io/
-      research_interest: Video Understanding and Compositionality
-      image: roi.jpg
-      email: roeiherz [at] berkeley.edu
-
     - name: Parsa Mahmoudieh
       website: https://people.eecs.berkeley.edu/~parsa.m/
       research_interest: Reinforcement Learning, Computer Vision, Robotics
@@ -145,6 +139,26 @@
       image: giscardbiamby.jpg
       email: gbiamby [at] berkeley.edu
 
+    - name: Sanjay Subramanian
+      website: https://people.eecs.berkeley.edu/~sanjayss/
+      research_interest: Vision and Language
+      image: sanjay.jpg
+      email: sanjayss [at] berkeley.edu
+
+    - name: Marissa Ramirez de Chanlatte
+      website: marissachanlatte.github.io
+      research_interest: 3D Geometry & Vision, Physical Simulation
+      image: marissaramirezdechanlatte.jpg
+      email: mzweig [at] berkeley.edu
+
+- title: Masters Students
+  people:
+    - name: Oscar (Zhiqiu) Xu
+      website: https://www.linkedin.com/in/oscar-xu-1250821a1/
+      research_interest: Computer Vision, Representation Learning
+      image: oscarxu.jpg
+      email: oscar.xzq [at] berkeley.edu
+
 - title: Undergraduate Students
   people:
 
@@ -155,3 +169,9 @@
       research_interest: Few-shot learning
       image: dian.jpg
       email: dian [at] berkeley.edu
+
+    - name: Roi Herzig
+      website: https://roeiherz.github.io/
+      research_interest: Video Understanding and Compositionality
+      image: roi.jpg
+      email: roeiherz [at] berkeley.edu
