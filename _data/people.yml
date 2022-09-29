@@ -64,12 +64,12 @@
     - name: Suzie Petryk
       website: https://spetryk.github.io/
       research_interest: Advisable Models
-      image: suzie.png
+      image: suziepetryk.jpg
       email: spetryk [at] berkeley.edu
 
     - name: Colorado Reed
       website: http://people.eecs.berkeley.edu/~cjrd/
-      research_interest: Unsupervised learning
+      research_interest: Multimodal Representation Learning for Earth Sciences
       image: colorado.jpg
       email: cjrd [at] berkeley.edu
 
@@ -93,7 +93,7 @@
 
     - name: Tete Xiao
       website: https://tetexiao.com/
-      research_interest: Representation Learning
+      research_interest: Scalable Representation Learning, Robotics
       image: tete.jpg
       email: txiao [at] eecs.berkeley.edu
 
@@ -161,6 +161,10 @@
 
 - title: Undergraduate Students
   people:
+      - name: Maolin Mao
+      research_interest: Computer Vision
+      image: maolinmao.jpg
+      email: maolinm [at] berkeley.edu
 
 - title: Visitors
   people:
