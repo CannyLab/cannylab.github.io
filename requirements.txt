@@ -3,3 +3,4 @@ pystache>=0.5.4
 requests>=2.20.0
 beautifulsoup4>=4.12.2
 scholarly>=0.8.1
+tqdm>=4.67.1

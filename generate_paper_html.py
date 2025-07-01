@@ -1,31 +1,41 @@
 """
 Download papers, and correctly format them as a table for our website
 """
+from scholarly import scholarly
+from tqdm import tqdm
+import html
 
-import requests
-import bs4
+# Step 1: Search for the author by ID
+author = scholarly.search_author_id('LAv0HTEAAAAJ')
+author = scholarly.fill(author, sections=['publications'])
 
-data = requests.get('https://scholar.google.com/citations?user=LAv0HTEAAAAJ&view_op=list_works&sortby=pubdate&pagesize=20&json')
-raw_html = data.json()['B']
+# Step 2: Sort publications by year (descending)
+publications = sorted(author['publications'], key=lambda p: p.get('bib', {}).get('pub_year', '0'), reverse=True)
 
-soup = bs4.BeautifulSoup(raw_html, 'html.parser')
+# Step 3: Write to HTML file
+with open('papers_new.html', 'w', encoding='utf-8') as out_f:
+    for pub in tqdm(publications[:20], desc="Processing papers"):  # Limit to most recent 20
+        pub = scholarly.fill(pub)
+        bib = pub.get('bib', {})
+        title = html.escape(bib.get('title', ''))
+        authors = html.escape(bib.get('author', ''))
+        authors = authors.replace(' and ', ', ')
+        year = bib.get('pub_year', '')
+        citations = pub.get('num_citations', 0)
+        paper_id = pub.get('pub_url', '')  # might be None
+        link = pub.get('pub_url', '#')
+        # import pdb; pdb.set_trace()
+        # Use scholar link if available
+        # if 'citation_id' in pub:
+        #     citation_id = pub['citation_id']
+        #     link = f"https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LAv0HTEAAAAJ&citation_for_view={citation_id}"
+        # else:
+        #     link = bib.get('pub_url', '#')
 
-with open('papers.html', 'w') as out_f:
-    for elem in soup.find_all('tr'):
-
-        title = elem.find(class_='gsc_a_at').text
-        authors = elem.find(class_='gs_gray').text
-        citations = elem.find(class_='gsc_a_ac').text
-        year = elem.find(class_='gsc_a_h').text
-        paper_id = elem.find(class_='gsc_a_at')['data-href'].split('&')[-1].split('=')[-1].replace(':', '%3A')
-        link = 'https://scholar.google.com/citations?user=LAv0HTEAAAAJ#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Den%26user%3DLAv0HTEAAAAJ%26citation_for_view%3D{}%26tzom%3D420'.format(paper_id)
-
-        template = """<li>
-    <h4 class="menu-item-name"><a href={}>{}</a></h4>
-    <span class="menu-item-price">({}, {})</span>
+        template = f"""<li>
+    <h4 class="menu-item-name"><a href="{link}">{title}</a></h4>
+    <span class="menu-item-price">({authors}, {year})</span>
     <br>
 </li>
-""".format(link, title, authors, year)
-
+"""
         out_f.write(template)
-
