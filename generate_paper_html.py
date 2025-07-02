@@ -24,13 +24,6 @@ with open('papers_new.html', 'w', encoding='utf-8') as out_f:
         citations = pub.get('num_citations', 0)
         paper_id = pub.get('pub_url', '')  # might be None
         link = pub.get('pub_url', '#')
-        # import pdb; pdb.set_trace()
-        # Use scholar link if available
-        # if 'citation_id' in pub:
-        #     citation_id = pub['citation_id']
-        #     link = f"https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LAv0HTEAAAAJ&citation_for_view={citation_id}"
-        # else:
-        #     link = bib.get('pub_url', '#')
 
         template = f"""<li>
     <h4 class="menu-item-name"><a href="{link}">{title}</a></h4>
